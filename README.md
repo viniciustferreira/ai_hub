@@ -1,38 +1,27 @@
-# AiHub
+# AiHub (WIP)
 
-TODO: Delete this and the text below, and describe your gem
-
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/ai_hub`. To experiment with that code, run `bin/console` for an interactive prompt.
+This Gem allow yo to connect to a IA chat assistent (Gemini and Deepseek).
 
 ## Installation
 
-TODO: Replace `UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG` with your gem name right after releasing it to RubyGems.org. Please do not do it earlier due to security reasons. Alternatively, replace this section with instructions to install your gem from git if you don't plan to release to RubyGems.org.
+This is not available on rubygems, its necessary to download this package and install with: `gem build ai_hub.gemspec && gem install ai_hub-0.1.0.gem` .
 
-Install the gem and add to the application's Gemfile by executing:
-
-```bash
-bundle add UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG
-```
-
-If bundler is not being used to manage dependencies, install the gem by executing:
-
-```bash
-gem install UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG
-```
+After installing, its time to create the `.secrets` file on your rails project, running the `ai_hub_init` on console command on the root folder, filling the file with the kash keys and urls, and then running again to create the env variables with the data.
 
 ## Usage
 
-TODO: Write usage instructions here
+``` require 'ai_hub'``` 
 
-## Development
+```AiHub::Query.post("Any text you want to send", 'deepseek')```
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+Example:
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+<img width="1902" height="146" alt="image" src="https://github.com/user-attachments/assets/cacfea92-dcb7-42c7-8183-82d4a634ca82" />
+
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/ai_hub.
+Bug reports and pull requests are welcome on GitHub at https://github.com/viniciustferreira/ai_hub.
 
 ## License
 
