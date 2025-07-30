@@ -1,12 +1,21 @@
 # AiHub (WIP)
 
-This Gem allow yo to connect to a IA chat assistent (Gemini and Deepseek).
+This Gem allow yo to connect to a IA chat assistent (only Gemini and Deepseek for now).
 
 ## Installation
 
-This is not available on rubygems, its necessary to download this package and install with: `gem build ai_hub.gemspec && gem install ai_hub-0.1.0.gem` .
+Its time to create environment variables:
+Gemini:
 
-After installing, its time to create the `.secrets` file on your rails project, running the `ai_hub_init` on console command on the root folder, filling the file with the kash keys and urls, and then running again to create the env variables with the data.
+`AI_API_GEMINI_URL` 
+
+obs: the key is part of the url.
+
+Deepseek:
+
+`AI_API_DEEPSEEK_URL` and `AI_API_DEEPSEEK_KEY` 
+
+obs: deepseek require payment to access API for testing.
 
 ## Usage
 

@@ -3,7 +3,7 @@ require_relative 'api'
 module Ai
   class Gemini < Ai::Api
     def initialize(message, options = {})
-      raise "AI_API_GEMINI_URL and AI_API_GEMINI_KEY environment variables must be set" unless ENV['AI_API_GEMINI_URL'] && ENV['AI_API_GEMINI_KEY']
+      raise "AI_API_GEMINI_URL environment variables must be set" unless ENV['AI_API_GEMINI_URL']
       super(message, options)
     end
 
@@ -31,10 +31,6 @@ module Ai
 
     def api_url
       ENV['AI_API_GEMINI_URL']
-    end
-
-    def api_key
-      ENV['AI_API_GEMINI_KEY']
     end
   end
 end

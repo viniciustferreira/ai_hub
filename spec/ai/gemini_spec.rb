@@ -7,13 +7,12 @@ RSpec.describe Ai::Gemini do
 
   before do
     ENV['AI_API_GEMINI_URL'] = 'https://api.gemini.example.com'
-    ENV['AI_API_GEMINI_KEY'] = 'test_api_key'
   end
 
   describe '#initialize' do
     it 'raises an error if environment variables are not set' do
       ENV.delete('AI_API_GEMINI_URL')
-      expect { Ai::Gemini.new(message) }.to raise_error(RuntimeError, "AI_API_GEMINI_URL and AI_API_GEMINI_KEY environment variables must be set")
+      expect { Ai::Gemini.new(message) }.to raise_error(RuntimeError, "AI_API_GEMINI_URL environment variables must be set")
     end
 
     it 'initializes with the correct message and options' do
